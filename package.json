@@ -1,0 +1,20 @@
+{
+  "name": "beeper",
+  "version": "1.0.0",
+  "description": "beeper web app for CHI25",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "fs": "^0.0.1-security",
+    "http": "^0.0.1-security",
+    "http-server": "^14.1.1",
+    "ip": "^2.0.1",
+    "path": "^0.12.7",
+    "socket.io": "^4.7.5",
+    "sqlite3": "^5.1.7"
+  }
+}

@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+@font-face {
+  font-family: 'digital';
+  src: url('../fonts/DigitalNumbers-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root {
+    --deepgrey: #cecece;
+    --lightgrey: #f2f2f2;
+    --grey: #ededed;
+  }
+
+html,
+body {
+  width: 100%;
+  height: 100%;  
+  font-family: 'Roboto', sans-serif;
+  font-stretch: semi-condensed;
+  display: flex;
+  user-select: none;
+  margin: 0;
+  overflow: hidden;
+  touch-action: none;
+}
+
+#menu {
+  width: 90%;
+  height: 60px;
+  position: fixed;
+  display: inline-block;
+  top: 10px;
+  left: 5%;
+  background-color: var(--lightgrey);
+  border: 3px solid black;
+  border-radius: 12px;
+}
+
+.menu-item {
+  width: 45%;
+  height: 60px;
+  line-height: 60px;
+  position: absolute;
+  display: inline-block;
+  text-align: center;
+  font-weight: bold;
+}
+
+#menu1 {
+  margin-left: 5%;
+}
+
+#menu2 {
+  margin-left: 50%;
+}
+
+.current-menu {
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/polygon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  margin-top: 21px;
+}
+
+#current1{
+  margin-left: 17%;
+}
+
+#current2{
+  margin-left: 62%;
+}
+
+.main{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  transition: all 0.8s ease; 
+}
+
+.main.hide {
+  margin-top: 100vh;
+}
+
+#beeperDevice {
+  position: absolute;
+  width: 90%;
+  height: 270px;
+  border-radius: 20px;
+  border: 3px solid black;
+  background-color: var(--grey);
+  left: 5%;
+  bottom: calc(90px + var(--bottom-safe-area));
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#beeperInfo  {
+  position: absolute;
+  width: 60%;
+  right: 5%;
+  height: 40px;
+  line-height: 42px;
+  text-align: right;
+  font-size: 14px;
+}
+
+#outerLine {
+  width: 90%;
+  margin-left: calc(5% - 2px);
+  margin-top: 40px;
+  height: 140px;
+  text-align: center;
+  border-radius: 16px;
+  border: 3px solid black;
+}
+
+#beeperDisplay {
+  width: 96%;
+  margin-left: 2%;
+  margin-top: 7px;
+  height: 126px;
+  text-align: center;
+  background-color: black;
+  font-size: 28px;
+  border-radius: 12px;
+}
+
+#beepingType {
+  position: absolute;
+  width: 45%;
+  left: 14%;
+  height: 52px;
+  line-height: 52px;
+  font-family: 'digital';
+  color: white;
+  font-size: 15px;
+  text-align: left;
+}
+
+#beepingTime {
+  position: absolute;
+  width: 45%;
+  right: 14%;
+  height: 52px;
+  line-height: 52px;
+  font-family: 'digital';
+  color: white;
+  font-size: 15px;
+  text-align: right;
+}
+
+#beepingMsg {
+  position: absolute;
+  width: 80%;
+  left: 10%;
+  margin-top: 42px;
+  height: 74px;
+  line-height: 74px;
+  font-family: 'digital';
+  color: white;
+  font-size: 30px;
+  text-align: center;
+}
+
+#beeperButtons {
+  position: absolute;
+  width: 90%;
+  height: 86px;
+  left: 5%;
+}
+
+.beeper-btn {
+  position: absolute;
+  width: 28%;
+  height: 50px;
+  top: 12px;
+  border-radius: 33px;
+  border: 3px solid black;
+  box-shadow: 2px 5px 12px rgba(0, 0, 0, 0.2), 1px 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+#beeperBtn1 {
+  left: 2%;
+  background-image: url("../img/prev.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px;
+}
+
+#beeperBtn2 {
+  left: 35%;
+  background-image: url("../img/delete.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 26px;
+}
+
+#beeperBtn3 {
+  right: 2%;
+  background-image: url("../img/next.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 16px;
+}
+
+#map {
+  width: 100%;
+  height: calc(100% - 90px);
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: -10;
+}
+
+#dial {
+  position: absolute;
+  width: 90%;
+  height: 620px;
+  border-radius: 20px;
+  border: 3px solid black;
+  background-color: var(--grey);
+  left: 5%;
+  bottom: calc(90px + var(--bottom-safe-area));
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+#dialInfo  {
+  position: absolute;
+  width: 60%;
+  right: 9%;
+  height: 40px;
+  line-height: 42px;
+  text-align: right;
+  font-size: 14px;
+}
+
+#dialDisplay {
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  width: 82%;
+  margin-left: 9%;
+  margin-top: 40px;
+  height: 88px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: inset 5px 0 20px -5px rgba(0, 0, 0, 0.26), inset 0 5px 20px -5px rgba(0, 0, 0, 0.23);
+}
+
+#dialNotice {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee 10s linear infinite;
+  margin-top: 12px;
+}
+
+@keyframes marquee {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-90%);
+  }
+}
+
+#dialDisplay2 {
+  position: relative;
+  z-index: 1;
+  width: 82%;
+  margin-left: 9%;
+  margin-top: 40px;
+  height: 88px;
+}
+
+#phoneNumber {
+  width: 100%;
+  border: none;
+  background: none;
+  text-align: center;
+  margin-top: 36px;
+  font-family: 'digital';
+  font-size: 30px;
+}
+
+.dial-pad {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 40px 46px 0px 46px;
+}
+
+.dial-button {
+  width: 76px;
+  height: 76px;
+  padding-bottom: 8px;
+  background-image: url("../img/dial.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  color: black;
+  border: none;
+}
+
+.control-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 10px 46px;
+  gap: 10px;
+}
+
+.call-button {
+  width: 122px;
+  height: 76px;
+  background-image: url("../img/calling.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border: none;
+}
+
+.backspace-button {
+  width: 122px;
+  height: 76px;
+  background-image: url("../img/backspace.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+  border: none;
+}
+
+#msgContainer {
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center;
+  background-color: rgba(255, 0, 0, 0.8);
+  color: white;
+  font-size: 18px;
+  z-index: 1000;
+  bottom: 0;
+}
